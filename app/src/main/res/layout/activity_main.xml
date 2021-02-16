@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="389dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="첫번째 숫자"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="두번째 숫자(나누기 시 0 입력 금지)"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/AddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number2"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="134dp"
+        android:onClick="addclick"
+        android:text="더하기"
+        app:backgroundTint="#FF5722" />
+
+
+    <Button
+        android:id="@+id/MultiplyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/AddButton"
+        android:layout_marginTop="117dp"
+        android:layout_marginRight="208dp"
+        android:layout_toLeftOf="@+id/DivideButton"
+        android:onClick="multiplyclick"
+        android:text="곱하기"
+        app:backgroundTint="#FFC107" />
+
+    <Button
+        android:id="@+id/DivideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/AddButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:onClick="divideclick"
+        android:text="나누기"
+        app:backgroundTint="#FFEB3B" />
+
+    <Button
+        android:id="@+id/SubtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/AddButton"
+        android:layout_marginLeft="213dp"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/AddButton"
+        android:onClick="subtractclick"
+        android:text="빼기"
+        app:backgroundTint="#FF9800" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="374dp"
+        android:layout_height="64dp"
+        android:layout_alignTop="@+id/AddButton"
+        android:layout_marginLeft="-380dp"
+        android:layout_marginTop="205dp"
+        android:layout_toRightOf="@id/number2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+</RelativeLayout>
